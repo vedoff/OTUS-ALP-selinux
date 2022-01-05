@@ -82,7 +82,7 @@
 `systemctl restart nginx` \
 `systemctl status nginx`
 
-![Провелка сервиса nginx]()
+![Провелка сервиса nginx](https://github.com/vedoff/selinux/blob/main/pict/Screenshot%20from%202022-01-05%2020-54-55.png)
 
 
 
