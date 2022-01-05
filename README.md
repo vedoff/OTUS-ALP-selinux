@@ -110,4 +110,4 @@ nginx.te \
 
 Проверяем запуск nginx \
 `systemctl status nginx && systemctl restart nginx && systemctl status nginx`
-![]()
+![](https://github.com/vedoff/selinux/blob/main/pict/Screenshot%20from%202022-01-05%2021-49-19.png)
