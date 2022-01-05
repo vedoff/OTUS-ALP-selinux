@@ -17,7 +17,8 @@
 ![](https://github.com/vedoff/selinux/blob/main/pict/Screenshot%20from%202022-01-05%2018-26-20.png)
 
 ### Исправляем
-- Вариант №1 \
+####  ==================================== Вариант №1 =======================================
+#### Переключатели setsebool
   Убедимся, что конфигурация nginx верная и firewall отключен. Проблема в SELinux \
   ![Удастоверимся, что проблема в SELinux](https://github.com/vedoff/selinux/blob/main/pict/Screenshot%20from%202022-01-05%2018-55-00.png)
 
@@ -49,4 +50,26 @@
 Проверка статуса nis_enabled: \
 `getsebool -a | grep nis_enabled`
 > nis_enabled --> off | on
+
+#### =================================== Вариант №2 =======================================
+
+#### Добавление нестандартного порта в имеющийся тип
+- Поиск имеющегося типа, для http трафика: \
+`semanage port -l | grep http `
+
+![Проверка типа для http трафика]()
+
+Добавим порт в тип http_port_t: \
+`semanage port -a -t http_port_t -p tcp 4881` \
+Проверяем: \
+`semanage port -l | grep http `
+
+![Проверка, что порт добавлен]()
+
+Перезапускаем nginx и проверяем иго работу \
+`systemctl restart nginx && systemctl status nginx && ss -tunlp && sestatus`
+
+![Проверка запуска сервиса nginx]()
+
+
 
