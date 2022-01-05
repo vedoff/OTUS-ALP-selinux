@@ -76,8 +76,6 @@
 Проверка что порт удален \
 `semanage port -l | grep http_port_t` 
 
-![Проверка что порт удален]()
-
 Проверка сервиса nginx \
 `systemctl restart nginx` \
 `systemctl status nginx`
