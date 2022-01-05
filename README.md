@@ -57,7 +57,7 @@
 - Поиск имеющегося типа, для http трафика: \
 `semanage port -l | grep http `
 
-![Проверка типа для http трафика]()
+![Проверка типа для http трафика](https://github.com/vedoff/selinux/blob/main/pict/Screenshot%20from%202022-01-05%2020-22-20.png)
 
 Добавим порт в тип http_port_t: \
 `semanage port -a -t http_port_t -p tcp 4881` \
