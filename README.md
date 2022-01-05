@@ -82,6 +82,18 @@
 
 ![Провелка сервиса nginx](https://github.com/vedoff/selinux/blob/main/pict/Screenshot%20from%202022-01-05%2020-54-55.png)
 
+####  ==================================== Вариант №3 =======================================
+#### Формирование и установка модуля SELinux
+
+Проверка запуска nginx \
+`systemctl status nginx` \
+
+Просмотр лога \
+`grep nginx /var/log/audit/audit.log`
+
+Создание модуля запуска nginx используя утилиту audit2allow \
+
+`grep nginx /var/log/audit/audit.log | audit2allow -M nginx`
 
 
 
