@@ -91,7 +91,7 @@
 Просмотр лога \
 `grep nginx /var/log/audit/audit.log`
 
-Создание модуля запуска nginx используя утилиту audit2allow \
+Создание модуля запуска nginx используя утилиту audit2allow 
 
 `grep nginx /var/log/audit/audit.log | audit2allow -M nginx`
 
