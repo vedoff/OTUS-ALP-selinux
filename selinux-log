@@ -1,0 +1,73 @@
+
+PLAY [web] *********************************************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [192.168.56.215]
+
+TASK [epel : Install epel-relese] **********************************************
+changed: [192.168.56.215]
+
+TASK [nginx : Inclide vars] ****************************************************
+ok: [192.168.56.215]
+
+TASK [nginx : Install nginx for Centos] ****************************************
+changed: [192.168.56.215]
+
+TASK [nginx : Install nginx Debian/Ubuntu] *************************************
+skipping: [192.168.56.215]
+
+TASK [nginx : Template for NGINX] **********************************************
+changed: [192.168.56.215]
+
+TASK [nginx : Templte for domain] **********************************************
+changed: [192.168.56.215]
+
+TASK [nginx : Create folder for domain site] ***********************************
+changed: [192.168.56.215]
+
+TASK [nginx : Copy file home-site.local] ***************************************
+changed: [192.168.56.215]
+
+RUNNING HANDLER [nginx : nginx restart service] ********************************
+fatal: [192.168.56.215]: FAILED! => {"changed": false, "msg": "Unable to start service nginx: Job for nginx.service failed because the control process exited with error code. See \"systemctl status nginx.service\" and \"journalctl -xe\" for details.\n"}
+
+RUNNING HANDLER [nginx : start nginx] ******************************************
+
+NO MORE HOSTS LEFT *************************************************************
+
+PLAY RECAP *********************************************************************
+192.168.56.215             : ok=8    changed=6    unreachable=0    failed=1    skipped=1    rescued=0    ignored=0   
+
+
+PLAY [web] *********************************************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [192.168.56.215]
+
+TASK [epel : Install epel-relese] **********************************************
+ok: [192.168.56.215]
+
+TASK [nginx : Inclide vars] ****************************************************
+ok: [192.168.56.215]
+
+TASK [nginx : Install nginx for Centos] ****************************************
+ok: [192.168.56.215]
+
+TASK [nginx : Install nginx Debian/Ubuntu] *************************************
+skipping: [192.168.56.215]
+
+TASK [nginx : Template for NGINX] **********************************************
+ok: [192.168.56.215]
+
+TASK [nginx : Templte for domain] **********************************************
+ok: [192.168.56.215]
+
+TASK [nginx : Create folder for domain site] ***********************************
+ok: [192.168.56.215]
+
+TASK [nginx : Copy file home-site.local] ***************************************
+ok: [192.168.56.215]
+
+PLAY RECAP *********************************************************************
+192.168.56.215             : ok=8    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+
