@@ -102,9 +102,12 @@ nginx.te \
 
 Запускаем команду установки модуля \
 `semodule -i nginx.pp`
+
+![](https://github.com/vedoff/selinux/blob/main/pict/Screenshot%20from%202022-01-05%2021-51-30.png)
+
 Проверяем \
 `semodule -l | grep nginx` \
 
 Проверяем запуск nginx \
 `systemctl status nginx && systemctl restart nginx && systemctl status nginx`
-
+![]()
