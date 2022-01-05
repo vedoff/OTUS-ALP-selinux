@@ -24,8 +24,12 @@
 Разрешим в SELinux работу nginx на порту TCP 4881 c помощью
 переключателей setsebool \
 Найдем ошибку в логе \
-vi /var/log/audit/audit.log \
+`vi /var/log/audit/audit.log` \
 Используем шаблон vi в командном режиме для поиска нужной строки 
-- /4881 \
-- 
+- `/4881`\
+![](https://github.com/vedoff/selinux/blob/main/pict/Screenshot%20from%202022-01-05%2018-59-14.png)
+
+Используем время для поиска нужной строки и передаем ее на вход утилиты audit2why
+
+`grep 1641399794.463:518 /var/log/audit/audit.log | audit2why` 
 
