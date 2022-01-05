@@ -46,3 +46,7 @@
 ###
 ![](https://github.com/vedoff/selinux/blob/main/pict/Screenshot%20from%202022-01-05%2019-58-05.png)
 
+Проверка статуса nis_enabled: \
+`getsebool -a | grep nis_enabled`
+> nis_enabled --> off | on
+
