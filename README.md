@@ -69,7 +69,7 @@
 Перезапускаем nginx и проверяем иго работу \
 `systemctl restart nginx && systemctl status nginx && ss -tunlp && sestatus`
 
-![Проверка запуска сервиса nginx]()
+![Проверка запуска сервиса nginx](https://github.com/vedoff/selinux/blob/main/pict/Screenshot%20from%202022-01-05%2020-35-13.png)
 
 
 
