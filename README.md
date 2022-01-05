@@ -76,14 +76,35 @@
 Проверка что порт удален \
 `semanage port -l | grep http_port_t` 
 
-![Проверка что порт удален]()
-
 Проверка сервиса nginx \
 `systemctl restart nginx` \
 `systemctl status nginx`
 
-![Провелка сервиса nginx]()
+![Провелка сервиса nginx](https://github.com/vedoff/selinux/blob/main/pict/Screenshot%20from%202022-01-05%2020-54-55.png)
 
+####  ==================================== Вариант №3 =======================================
+#### Формирование и установка модуля SELinux
 
+Проверка запуска nginx \
+`systemctl status nginx`
 
+Просмотр лога \
+`grep nginx /var/log/audit/audit.log`
+
+Создание модуля запуска nginx используя утилиту audit2allow. Так же вывод подсказывает команду установки модуля.\
+`grep nginx /var/log/audit/audit.log | audit2allow -M nginx` \
+На выходе получим два файла модуля \
+nginx.pp \
+nginx.te \
+
+Копируем файлы модуля в папку 
+`cp nginx.* /etc/nginx/ && cd /etc/nginx`
+
+Запускаем команду установки модуля \
+`semodule -i nginx.pp`
+Проверяем \
+`semodule -l | grep nginx` \
+
+Проверяем запуск nginx \
+`systemctl status nginx && systemctl restart nginx && systemctl status nginx`
 
