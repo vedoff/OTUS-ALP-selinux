@@ -32,6 +32,7 @@
 Используем время для поиска нужной строки и передаем ее на вход утилиты audit2why
 
 `grep 1641399794.463:518 /var/log/audit/audit.log | audit2why`
+###
 ![](https://github.com/vedoff/selinux/blob/main/pict/Screenshot%20from%202022-01-05%2019-01-47.png)
 
 На выходе получаем требуемые действия для того, что бы наш сервис запустился на не стандартном порту. \
@@ -40,6 +41,7 @@
 Запустим наш сервис nginx \
 `setsebool -P nis_enabled on && systemctl restart nginx`
 ### Проверяем что сервис запустился
-`systemctl status nginx && ss -tunlp` \
+`systemctl status nginx && ss -tunlp`
+###
 ![](https://github.com/vedoff/selinux/blob/main/pict/Screenshot%20from%202022-01-05%2019-03-47.png)
 
