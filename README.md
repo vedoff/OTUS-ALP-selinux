@@ -17,12 +17,15 @@
 ![](https://github.com/vedoff/selinux/blob/main/pict/Screenshot%20from%202022-01-05%2018-26-20.png)
 
 ### Исправляем
-- Вариант №1
+- Вариант №1 \
+  Убедимся, что конфигурация nginx верная и firewall отключен. Проблема в SELinux \
+  ![Удастоверимся, что проблема в SELinux](https://github.com/vedoff/selinux/blob/main/pict/Screenshot%20from%202022-01-05%2018-55-00.png)
 
 Разрешим в SELinux работу nginx на порту TCP 4881 c помощью
 переключателей setsebool \
 Найдем ошибку в логе \
 vi /var/log/audit/audit.log \
 Используем шаблон vi в командном режиме для поиска нужной строки 
-- /4881
-![Удастоверимся, что проблема в SELinux]()
+- /4881 \
+- 
+
