@@ -86,14 +86,25 @@
 #### Формирование и установка модуля SELinux
 
 Проверка запуска nginx \
-`systemctl status nginx` \
+`systemctl status nginx`
 
 Просмотр лога \
 `grep nginx /var/log/audit/audit.log`
 
-Создание модуля запуска nginx используя утилиту audit2allow 
+Создание модуля запуска nginx используя утилиту audit2allow. Так же вывод подсказывает команду установки модуля.\
+`grep nginx /var/log/audit/audit.log | audit2allow -M nginx` \
+На выходе получим два файла модуля \
+nginx.pp \
+nginx.te \
 
-`grep nginx /var/log/audit/audit.log | audit2allow -M nginx`
+Копируем файлы модуля в папку 
+`cp nginx.* /etc/nginx/ && cd /etc/nginx`
 
+Запускаем команду установки модуля \
+`semodule -i nginx.pp`
+Проверяем \
+`semodule -l | grep nginx` \
 
+Проверяем запуск nginx \
+`systemctl status nginx && systemctl restart nginx && systemctl status nginx`
 
