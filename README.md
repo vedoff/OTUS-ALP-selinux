@@ -39,4 +39,7 @@
 `setsebool -P nis_enabled on` \
 Запустим наш сервис nginx \
 `setsebool -P nis_enabled on && systemctl restart nginx`
+### Проверяем что сервис запустился
+`systemctl status nginx && ss -tunlp` \
+![](https://github.com/vedoff/selinux/blob/main/pict/Screenshot%20from%202022-01-05%2019-03-47.png)
 
