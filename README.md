@@ -64,7 +64,7 @@
 Проверяем: \
 `semanage port -l | grep http `
 
-![Проверка, что порт добавлен]()
+![Проверка, что порт добавлен](https://github.com/vedoff/selinux/blob/main/pict/Screenshot%20from%202022-01-05%2020-32-46.png)
 
 Перезапускаем nginx и проверяем иго работу \
 `systemctl restart nginx && systemctl status nginx && ss -tunlp && sestatus`
