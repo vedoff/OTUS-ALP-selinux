@@ -74,12 +74,13 @@
 Удалить нестандартный порт из имеющегося типа \
 `semanage port -d -t http_port_t -p tcp 4881`
 Проверка что порт удален \
-`semanage port -l | grep http_port_t` \
+`semanage port -l | grep http_port_t` 
 
 ![Проверка что порт удален]()
 
 Проверка сервиса nginx \
-`systemctl restart nginx && systemctl status nginx`
+`systemctl restart nginx` \
+`systemctl status nginx`
 
 ![Провелка сервиса nginx]()
 
