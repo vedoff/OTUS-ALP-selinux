@@ -49,9 +49,10 @@
 
 Проверка статуса nis_enabled: \
 `getsebool -a | grep nis_enabled`
-> nis_enabled --> off | on
- Отключение nis_enabled \
- `setsebool -P nis_enabled on`
+> nis_enabled --> off | on 
+
+Отключение nis_enabled \
+ `setsebool -P nis_enabled off`
  
 #### =================================== Вариант №2 =======================================
 
