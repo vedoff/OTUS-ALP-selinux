@@ -98,9 +98,9 @@
 `grep nginx /var/log/audit/audit.log | audit2allow -M nginx` \
 На выходе получим два файла модуля \
 nginx.pp \
-nginx.te \
+nginx.te 
 
-Копируем файлы модуля в папку 
+Копируем файлы модуля в папку \
 `cp nginx.* /etc/nginx/ && cd /etc/nginx`
 
 Запускаем команду установки модуля \
@@ -109,7 +109,7 @@ nginx.te \
 ![](https://github.com/vedoff/selinux/blob/main/pict/Screenshot%20from%202022-01-05%2021-51-30.png)
 
 Проверяем \
-`semodule -l | grep nginx` \
+`semodule -l | grep nginx` 
 
 Проверяем запуск nginx \
 `systemctl status nginx && systemctl restart nginx && systemctl status nginx`
