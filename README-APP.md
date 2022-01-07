@@ -25,6 +25,8 @@ https://github.com/mbfx/otus-linux-adm/tree/master/selinux_dns_problems;
 
 На клиенте отсутствуют ошибки 
 
+![](https://github.com/vedoff/selinux/blob/main/pict/Screenshot%20from%202022-01-06%2016-47-24.png)
+
 Подключимся к серверу ns01 и проверим логи SELinux \
 Проверяем лог \
 `cat /var/log/audit/audit.log | audit2why` \
