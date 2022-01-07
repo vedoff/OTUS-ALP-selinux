@@ -36,7 +36,7 @@ named_t используется тип etc_t.
 ![](https://github.com/vedoff/selinux/blob/main/pict/Screenshot%20from%202022-01-06%2016-59-20.png)
 
 Проверим данную проблему в каталоге /etc/named
-![]()
+![](https://github.com/vedoff/selinux/blob/main/pict/Screenshot%20from%202022-01-06%2022-10-26.png)
 
 Проблема заключается в том, что конфигурационные файлы лежат в другом каталоге.
 Посмотреть в каком каталоги должны лежать, файлы, чтобы на них
