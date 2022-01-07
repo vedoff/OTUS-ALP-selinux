@@ -16,7 +16,7 @@ https://github.com/mbfx/otus-linux-adm/tree/master/selinux_dns_problems;
 
 Попробуем внести изменения в зону
 
-![]()
+![](https://github.com/vedoff/selinux/blob/main/pict/Screenshot%20from%202022-01-06%2016-29-39.png)
 
 Изменения внести не получилось. Смотрим логи SELinux 
 
