@@ -51,4 +51,6 @@ named_t используется тип etc_t.
 
 Попробуем снова внести изменения с клиента: \
 `nsupdate -k /etc/named.zonetransfer.key`
-![]()
+После внесения изменений зона не обновилась, хотя пишет, что измениния внесены.
+Также пришлось допиливать Vagrantfile для запуска стенда. Не работала шара на папку в которй лежит pleybook для ansible.
+![](https://github.com/vedoff/selinux/blob/main/pict/Screenshot%20from%202022-01-07%2015-21-51.png)
