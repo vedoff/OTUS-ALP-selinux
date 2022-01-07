@@ -40,5 +40,5 @@ named_t используется тип etc_t.
 Посмотреть в каком каталоги должны лежать, файлы, чтобы на них
 распространялись правильные политики SELinux можно с помощью команды: \
 
-`semanage fcontext -l | grep named` 
+`semanage fcontext -l | grep named_conf_t` 
 ![]()
