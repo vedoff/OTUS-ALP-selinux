@@ -42,15 +42,18 @@
 `setsebool -P nis_enabled on` \
 Запустим наш сервис nginx \
 `setsebool -P nis_enabled on && systemctl restart nginx`
-### Проверяем что сервис запустился
+### Проверяем, что сервис запустился
 `systemctl status nginx && ss -tunlp && sestatus`
 ###
 ![](https://github.com/vedoff/selinux/blob/main/pict/Screenshot%20from%202022-01-05%2019-58-05.png)
 
 Проверка статуса nis_enabled: \
 `getsebool -a | grep nis_enabled`
-> nis_enabled --> off | on
+> nis_enabled --> off | on 
 
+Отключение nis_enabled \
+ `setsebool -P nis_enabled off`
+ 
 #### =================================== Вариант №2 =======================================
 
 #### Добавление нестандартного порта в имеющийся тип
@@ -66,7 +69,7 @@
 
 ![Проверка, что порт добавлен](https://github.com/vedoff/selinux/blob/main/pict/Screenshot%20from%202022-01-05%2020-32-46.png)
 
-Перезапускаем nginx и проверяем иго работу \
+Перезапускаем nginx и проверяем работу сервиса \
 `systemctl restart nginx && systemctl status nginx && ss -tunlp && sestatus`
 
 ![Проверка запуска сервиса nginx](https://github.com/vedoff/selinux/blob/main/pict/Screenshot%20from%202022-01-05%2020-35-13.png)
