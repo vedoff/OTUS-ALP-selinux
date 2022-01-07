@@ -45,7 +45,8 @@ named_t используется тип etc_t.
 `semanage fcontext -l | grep named` 
 
 Изменим тип контекста безопасности для каталога /etc/named: \
-`chcon -R -t named_zone_t /etc/named`
+`chcon -R -t named_zone_t /etc/named` \
+
 ![](https://github.com/vedoff/selinux/blob/main/pict/Screenshot%20from%202022-01-07%2012-37-56.png)
 
 Попробуем снова внести изменения с клиента: \
