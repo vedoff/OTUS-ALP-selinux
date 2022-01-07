@@ -33,7 +33,7 @@ https://github.com/mbfx/otus-linux-adm/tree/master/selinux_dns_problems;
 В логах мы видим, что ошибка в контексте безопасности. Вместо типа
 named_t используется тип etc_t.
 
-![]()
+![](https://github.com/vedoff/selinux/blob/main/pict/Screenshot%20from%202022-01-06%2016-59-20.png)
 
 Проверим данную проблему в каталоге /etc/named
 ![]()
